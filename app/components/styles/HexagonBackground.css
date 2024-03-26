@@ -3,10 +3,10 @@
     padding: 0px;
     box-sizing: border-box;
     z-index: -10;
-    overflow: hidden;
 }
 body{
     background-color: #000000;
+    overflow-x: hidden;
     /* z-index: -10; */
 }
 .hexagon-background {
