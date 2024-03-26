@@ -9,3 +9,9 @@
    transition: font-color 0.3s ease;
    z-index: 10;
 }
+.navbar{
+   background-color: #ffffff00;
+   z-index: 100;
+   margin-top: 2rem;
+   position: absolute;
+}

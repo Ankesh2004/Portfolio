@@ -16,7 +16,7 @@ const  Navbar = ()=>{
   let [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
-    <div className="flex z-0 flex-wrap space-x-1 border-2 p-1 rounded-[2rem]">
+    <div className="navbar flex z-0 flex-wrap  border-2 p-1 rounded-[2rem]">
       {tabs.map((tab) => (
         <button
         key={tab.id}
