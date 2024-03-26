@@ -6,6 +6,6 @@
    margin-top: 0.2rem;
    margin-bottom: 0.2rem;
    border-radius: 2rem;
-   /* transition: font-color 0.3s ease; */
+   transition: font-color 0.3s ease;
    z-index: 10;
 }
