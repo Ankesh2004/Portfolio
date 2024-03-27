@@ -6,7 +6,7 @@ import AnimatedText from "../utils/AnimateText";
 import ResumeBubble from "./ResumeBubble";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
+import ContactMeBtn from "./ContactMeBtn";
 
 
 const imageVariants = {
@@ -56,7 +56,7 @@ const Home = () => {
         />
       </motion.div>
       {/* Intro  */}
-      <div className="z-10 flex flex-col items-center">
+      <div className="z-10 flex flex-col items-center justify-center">
         <AnimatedText word="Hello I am," size={"2rem"} inView={inView} />
         <AnimatedText word="ANKESH GUPTA" size={"4rem"} inView={inView}/>
         <AnimatedText word="A" size={"1.5rem"} inView={inView}/>
@@ -65,7 +65,11 @@ const Home = () => {
         <AnimatedText word="Competitive Programmer" inView={inView}/>
       </div>
       
-      <ResumeBubble />
+      <div className="flex flex-wrap gap-[2rem] items-center justify-center">
+        <ResumeBubble />
+        <ContactMeBtn />
+      </div>
+      
     </div>
   )
 }

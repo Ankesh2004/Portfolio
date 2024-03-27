@@ -20,7 +20,7 @@ const Skill = ({ skill }) => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 1,
+                duration: 5,
                 type: "spring",
                 stiffness: 80,
                 damping: 10,
@@ -40,7 +40,7 @@ const Skill = ({ skill }) => {
             <div className={`bg-${skill.background} p-[0.2rem] rounded-xl`}>
             <Image src={skill.icon} alt={skill.title} width={`${isMobile ? '50':'75'}`} height={`${isMobile ? '50':'75'}`} background={skill.background} />
             </div>
-            <div className="flex bg-blue-800 items-center rounded-xl p-[0.2rem] text-yellow-200 opacity-0 text-sm group-hover:opacity-100 transition-opacity duration-200">
+            <div className="flex bg-blue-600 items-center rounded-xl p-[0.2rem] text-yellow-200 opacity-0 text-sm group-hover:opacity-100 transition-opacity duration-200">
                 <p>{skill.title}</p>
             </div>
         </motion.div>

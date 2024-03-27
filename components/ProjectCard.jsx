@@ -72,7 +72,7 @@ const ProjectCard = ({ project, left }) => {
                 <p>{project.description}</p>
                 <div className="flex flex-wrap gap-[0.2rem]">
                     {project.techstack.map((tech) => (
-                        <span className="p-[0.3rem] text-black bg-white rounded-2xl">{tech}</span>
+                        <span className="p-[0.3rem] text-black bg-cyan-400 rounded-2xl">{tech}</span>
                     ))}
                 </div>
                 <a href={project.sourceCode}>Source Code</a>

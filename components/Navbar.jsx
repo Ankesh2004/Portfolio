@@ -15,7 +15,7 @@ const Navbar = () => {
   let [activeTab, setActiveTab] = useState(tabs[0].id);
   const observer = useRef();
 
-  const handleClick = (id) => {
+ const handleClick = (id) => {
     setActiveTab(id);
     const element = document.getElementById(id);
     if (element) element.scrollIntoView({ behavior: 'smooth' });
