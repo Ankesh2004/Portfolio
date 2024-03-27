@@ -1,0 +1,15 @@
+.card{
+    width: 80%;
+}
+@media screen and (max-width:768px){
+    .card{
+        width: 100%;
+    }
+    .left {
+        order:2;
+    }
+  
+    .right {
+        order:1;
+    }
+  }

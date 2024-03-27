@@ -5,7 +5,7 @@ import HexagonBackground from '../components/HexagonBackground'
 import Home from '../components/Home';
 import About from '../components/About';
 import Skills from '../components/Skills';
-
+import Projects from '../components/Projects';
 
 export default function index() {
   return (
@@ -16,7 +16,7 @@ export default function index() {
         <Home />
         <About/>
         <Skills/>
-
+        <Projects/>
       </div>
 
     </div>
