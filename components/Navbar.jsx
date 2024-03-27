@@ -28,7 +28,7 @@ const Navbar = () => {
           setActiveTab(entry.target.id);
         }
       });
-    }, { threshold: 0.7 });
+    }, { threshold: 0.4 });
 
     tabs.forEach((tab) => {
       const element = document.getElementById(tab.id);

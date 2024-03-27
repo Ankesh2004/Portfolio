@@ -9,7 +9,7 @@ import Projects from '../components/Projects';
 
 export default function index() {
   return (
-    <div className="flex min-h-screen flex-col items-center">
+    <div className="flex min-h-screen pb-[4rem] flex-col items-center">
       <HexagonBackground />
       <Navbar />
       <div className='z-20 w-screen flex flex-col items-center'>

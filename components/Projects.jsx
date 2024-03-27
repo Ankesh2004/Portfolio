@@ -9,7 +9,7 @@ const Projects = () => {
         threshold: 0.5,
     });
   return (
-    <div ref={ref} id="projects" className="flex flex-col text-center gap-[2rem]  w-[80%]">
+    <div ref={ref} id="projects" className="flex flex-col p-[2rem] text-center gap-[2rem]  w-[80%]">
         <AnimatedText word={"Projects"} size={"4rem"} inView={inView}/>
         <div className="flex flex-col gap-[2rem]">
         {
