@@ -22,6 +22,7 @@ const About = () => {
       },
     },
   };
+  // show animation when inView is true
   const controls = useAnimation();
   const { ref, inView } = useInView({
     threshold: 0.5,

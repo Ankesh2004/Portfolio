@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import Link from "next/link";
+import { useState,useRef,useEffect} from "react";
 import "./styles/Navbar.css";
 
 let tabs = [
@@ -14,12 +13,35 @@ let tabs = [
 
 const Navbar = () => {
   let [activeTab, setActiveTab] = useState(tabs[0].id);
+  const observer = useRef();
 
   const handleClick = (id) => {
     setActiveTab(id);
     const element = document.getElementById(id);
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    observer.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveTab(entry.target.id);
+        }
+      });
+    }, { threshold: 0.7 });
+
+    tabs.forEach((tab) => {
+      const element = document.getElementById(tab.id);
+      if (element) observer.current.observe(element);
+    });
+
+    return () => {
+      tabs.forEach((tab) => {
+        const element = document.getElementById(tab.id);
+        if (element) observer.current.unobserve(element);
+      });
+    };
+  }, []);
 
   return (
     <div className="navbar flex flex-wrap space-x-1 border-2 p-1 rounded-[2rem]">

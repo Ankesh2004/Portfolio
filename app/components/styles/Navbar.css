@@ -12,6 +12,7 @@
 .navbar{
    background-color: #ffffff00;
    z-index: 100;
-   margin-top: 2rem;
+   margin-top: 1rem;
    margin-bottom: 2rem;
+   position: fixed;
 }
