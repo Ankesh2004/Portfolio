@@ -7,6 +7,7 @@ import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 export default function index() {
   return (
@@ -20,6 +21,7 @@ export default function index() {
         <Projects/>
         <Contact/>
       </div>
+      <Footer/>
 
     </div>
   );
