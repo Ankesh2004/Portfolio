@@ -1,5 +1,4 @@
 "use client";
-import { skills } from "../data/skills"
 import Image from "next/image"
 import { useAnimation, motion } from "framer-motion"
 import { useEffect } from "react";

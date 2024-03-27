@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState,useRef,useEffect} from "react";
-import "./styles/Navbar.css";
+import styles from "../styles/Navbar.module.css";
 
 let tabs = [
   { id: "home", label: "Home" },
@@ -44,7 +44,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar flex flex-wrap space-x-1 border-2 p-1 rounded-[2rem]">
+    <div className={styles.navbar}>
+    <div className="flex flex-wrap space-x-1 border-2 p-1 rounded-[2rem]">
       {tabs.map((tab) => (
         <button
           key={tab.id}
@@ -68,6 +69,7 @@ const Navbar = () => {
           {tab.label}
         </button>
       ))}
+    </div>
     </div>
   );
 }

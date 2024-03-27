@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import profilePic from "../../public/profile-pic.jpg"
+import profilePic from "../public/profile-pic.jpg"
 import { motion } from "framer-motion";
-import AnimatedText from "./utils/AnimateText";
+import AnimatedText from "../utils/AnimateText";
 import ResumeBubble from "./ResumeBubble";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -40,7 +40,7 @@ const Home = () => {
     }
   }, [inView]);
   return (
-    <div ref={ref} id="home" className={`flex flex-wrap items-center p-[4rem] justify-center bg-[#111a] rounded-lg w-[90%] gap-[6rem]`}>
+    <div ref={ref} id="home" className={`flex flex-wrap items-center p-[4rem] justify-center bg-[#111a] mt-[4rem] rounded-lg w-[90%] gap-[6rem]`}>
       {/* Profile Picture and CV  */}
       <motion.div className="z-10 flex items-center rounded-full"
         initial="hidden"

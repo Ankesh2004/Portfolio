@@ -1,6 +1,6 @@
 "use client";
 import { useInView } from 'react-intersection-observer';
-import AnimatedText from './utils/AnimateText';
+import AnimatedText from '../utils/AnimateText';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useAnimation } from 'framer-motion';

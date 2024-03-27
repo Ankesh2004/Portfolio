@@ -1,14 +1,17 @@
-*{
+/* *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     z-index: -10;
-}
-body{
+} */
+/* body{
     background-color: #000000;
     overflow-x: hidden;
     /* z-index: -10; */
-}
+/* } */ 
+
+
+/* NOTE THIS IS NOT BEING USED, CURRENTLY ALL HEXAGONBG STYLING IS INSIDE global.css*/
 .hexagon-background {
     position: fixed; /* or absolute */
     top: 0;

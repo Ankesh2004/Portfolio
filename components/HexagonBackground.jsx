@@ -1,5 +1,5 @@
 "use client";
-import './styles/HexagonBackground.css'
+import styles from'../styles/HexagonBackground.module.css'
 import { useCallback } from 'react'
 import Particles from 'react-particles';
 import { loadSlim } from "tsparticles-slim";

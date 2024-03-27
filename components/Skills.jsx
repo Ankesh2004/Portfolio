@@ -2,9 +2,8 @@
 import { skills } from "../data/skills";
 import Skill from "./Skill";
 import { useMediaQuery } from "react-responsive";
-import AnimatedText from "./utils/AnimateText";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import AnimatedText from "../utils/AnimateText";
+import { useInView } from "react-intersection-observer";;
 
 const Skills = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
