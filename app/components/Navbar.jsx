@@ -12,24 +12,29 @@ let tabs = [
   { id: "contact", label: "Contact" },
 ];
 
-const  Navbar = ()=>{
+const Navbar = () => {
   let [activeTab, setActiveTab] = useState(tabs[0].id);
+
+  const handleClick = (id) => {
+    setActiveTab(id);
+    const element = document.getElementById(id);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="navbar flex flex-wrap space-x-1 border-2 p-1 rounded-[2rem]">
       {tabs.map((tab) => (
         <button
-        key={tab.id}
-        onClick={() => setActiveTab(tab.id)}
-        className={`${
-          activeTab === tab.id ? `` : `hover:text-var(--foreground-rgb) /50`
-        } relative rounded-full px-3 py-1.5 text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2`}
-        style={{
-          WebkitTapHighlightColor: "transparent",
-          position: "relative" 
-        }}
-      >
-        <Link href={`#${tab.id}`}>
+          key={tab.id}
+          onClick={() => handleClick(tab.id)}
+          className={`${
+            activeTab === tab.id ? `` : `hover:text-var(--foreground-rgb) /50`
+          } relative rounded-full px-3 py-1.5 text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2`}
+          style={{
+            WebkitTapHighlightColor: "transparent",
+            position: "relative" 
+          }}
+        >
           {activeTab === tab.id && (
             <motion.span
               layoutId="bubble"
@@ -39,7 +44,6 @@ const  Navbar = ()=>{
             />
           )}
           {tab.label}
-        </Link>
         </button>
       ))}
     </div>

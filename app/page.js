@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HexagonBackground from './components/HexagonBackground'
 import Home from './components/Home';
 import About from './components/About';
+import Skills from './components/Skills';
 
 export default function Main() {
   return (
@@ -13,6 +14,7 @@ export default function Main() {
       <div className='z-50 w-screen flex flex-col items-center'>
         <Home />
         <About/>
+        <Skills/>
       </div>
 
     </div>

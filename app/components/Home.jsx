@@ -6,6 +6,8 @@ import AnimatedText from "./utils/AnimateText";
 import ResumeBubble from "./ResumeBubble";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
+
 
 const imageVariants = {
   hidden: {
@@ -28,6 +30,7 @@ const imageVariants = {
 };
 
 const Home = () => {
+  // const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -37,7 +40,7 @@ const Home = () => {
     }
   }, [inView]);
   return (
-    <div ref={ref} className="flex flex-wrap items-center p-[4rem] justify-center bg-[#111a] rounded-lg w-[90%] gap-[6rem]">
+    <div ref={ref} id="home" className={`flex flex-wrap items-center p-[4rem] justify-center bg-[#111a] rounded-lg w-[90%] gap-[6rem]`}>
       {/* Profile Picture and CV  */}
       <motion.div className="z-10 flex items-center rounded-full"
         initial="hidden"
@@ -53,7 +56,7 @@ const Home = () => {
         />
       </motion.div>
       {/* Intro  */}
-      <div className="z-10 flex flex-col">
+      <div className="z-10 flex flex-col items-center">
         <AnimatedText word="Hello I am," size={"2rem"} inView={inView} />
         <AnimatedText word="ANKESH GUPTA" size={"4rem"} inView={inView}/>
         <AnimatedText word="A" size={"1.5rem"} inView={inView}/>
