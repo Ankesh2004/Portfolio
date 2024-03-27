@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState,useRef,useEffect} from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from "../styles/Navbar.module.css";
 
 let tabs = [
@@ -44,18 +44,17 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={styles.navbar}>
-    <div className="flex flex-wrap space-x-1 border-2 p-1 rounded-[2rem]">
+
+    <div className={`${styles.navbar} flex flex-wrap space-x-1 border-2 p-1 rounded-[2rem]`}>
       {tabs.map((tab) => (
         <button
           key={tab.id}
           onClick={() => handleClick(tab.id)}
-          className={`${
-            activeTab === tab.id ? `` : `hover:text-var(--foreground-rgb) /50`
-          } relative rounded-full px-3 py-1.5 text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2`}
+          className={`${activeTab === tab.id ? `` : `hover:text-var(--foreground-rgb) /50`
+            } relative rounded-full px-3 py-1.5 text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2`}
           style={{
             WebkitTapHighlightColor: "transparent",
-            position: "relative" 
+            position: "relative"
           }}
         >
           {activeTab === tab.id && (
@@ -70,7 +69,7 @@ const Navbar = () => {
         </button>
       ))}
     </div>
-    </div>
+
   );
 }
 export default Navbar;
