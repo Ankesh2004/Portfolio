@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { contacts } from "../data/contact"
 import Image from "next/image"
 import { useMediaQuery } from "react-responsive"
+import toast from 'react-hot-toast';
 
 const Contact = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -12,17 +13,12 @@ const Contact = () => {
     const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
     const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
-    // const [formData,setFormData] = useState({
-    //     name:'',
-    //     email:'',
-    //     message:''
-    // })
-
     const sendEmail = (e) => {
         e.preventDefault();
-
+    
         console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY)
-
+        const toastId = toast.loading('Sending Email...');
+    
         emailjs
             .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
                 publicKey: PUBLIC_KEY,
@@ -30,9 +26,13 @@ const Contact = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    toast.success('Email Sent Successfully');
+                    toast.dismiss(toastId);
                 },
                 (error) => {
                     console.log('FAILED...', error);
+                    toast.error('Failed to send Email');
+                    toast.dismiss(toastId);
                 },
             );
     };
