@@ -22,6 +22,7 @@ import materialui from '../public/skills/materialui.svg';
 import postman from '../public/skills/postman.svg';
 import framer from '../public/skills/framer.svg';
 import appwrite from '../public/skills/appwrite.png';
+import redis from '../public/skills/redis.svg';
 
 export const skills = [
     {
@@ -140,8 +141,13 @@ export const skills = [
         background: "transparent",
     },
     {
-        title:"Framer",
+        title:"Framer Motion",
         icon:framer,
+        background: "transparent",
+    },
+    {
+        title:"Redis",
+        icon:redis,
         background: "transparent",
     }
 ];
