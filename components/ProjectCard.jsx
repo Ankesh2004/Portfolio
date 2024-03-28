@@ -47,7 +47,7 @@ const ProjectCard = ({ project, left }) => {
             console.log(`Project Card ${project.id} is in view`);
             controls.start("visible");
         }
-    }, [inView, controls])
+    }, [inView, controls,project.id])
     return (
         <motion.div ref={ref} className={`flex flex-wrap group  ${styles['card']} justify-around ${left ? 'ml-auto' : 'mr-auto'} p-[1rem] bg-[#111a] gap-[1rem]`}
             initial="hidden"
@@ -71,8 +71,8 @@ const ProjectCard = ({ project, left }) => {
                 <h1>{project.title}</h1>
                 <p>{project.description}</p>
                 <div className="flex flex-wrap gap-[0.2rem]">
-                    {project.techstack.map((tech) => (
-                        <span className="p-[0.3rem] text-black bg-cyan-400 rounded-2xl">{tech}</span>
+                    {project.techstack.map((tech,index) => (
+                        <span key={index} className="p-[0.3rem] text-black bg-cyan-400 rounded-2xl">{tech}</span>
                     ))}
                 </div>
                 <a href={project.sourceCode}>Source Code</a>

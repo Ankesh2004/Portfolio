@@ -40,7 +40,7 @@ const Contact = () => {
         <div id="contact" className={`flex ${isMobile ? 'flex-col' : 'flex-row'} my-[4rem]`}>
             <div className={`${isMobile ? 'w-[100%' : 'w-[50%]'} flex flex-col gap-[1rem] items-center `}>
                 <h2>Get in Touch</h2>
-                <p>Have a project idea? Elevate your vision - Reach Out and Let's Make It Happen. </p>
+                <p>Have a project idea? Elevate your vision - Reach Out and Let\'s Make It Happen. </p>
                 {/* <p>Feel free to reach out to me for any queries or collaborations.</p> */}
                 <div className="flex flex-row gap-[1rem]">
                     {
