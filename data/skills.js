@@ -23,6 +23,7 @@ import postman from '../public/skills/postman.svg';
 import framer from '../public/skills/framer.svg';
 import appwrite from '../public/skills/appwrite.png';
 import redis from '../public/skills/redis.svg';
+import typescript from '../public/skills/typescript.svg';
 
 export const skills = [
     {
@@ -103,6 +104,11 @@ export const skills = [
     {
         title:"Tailwind CSS",
         icon:tailwind,
+        background: "transparent",
+    },
+    {
+        title:"TypeScript",
+        icon:typescript,
         background: "transparent",
     },
     {

@@ -27,7 +27,7 @@ const ResumeBubble = () => {
     variants={resumeVariant}
     whileHover={{ scale: 1.1, boxShadow: "0px 0px 10px white" }}
     >
-      <a href="https://drive.google.com/file/d/1r41NSDBmoRPFfUPBZXhLyphjMbd0nYiv/view?usp=sharing" target="_blank"
+      <a href="https://drive.google.com/file/d/1UXMOu5lfrETUyrY4NwHrJGrjQCyYkFGg/view?usp=sharing" target="_blank"
       className="flex items-center gap-[0.5rem]">
         <FaDownload size={"1.5rem"}/>
         <p>My Resume</p>

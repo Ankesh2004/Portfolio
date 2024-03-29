@@ -62,21 +62,22 @@ const ProjectCard = ({ project, left }) => {
                     height={400}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 flex flex-col items-center justify-center transition-all duration-300">
-                    <span className="opacity-0 group-hover:opacity-100 text-white text-4xl">Live Link</span>
-                    <span className="opacity-0 group-hover:opacity-100 text-white text-4xl">Frontend Code</span>
-                    <span className="opacity-0 group-hover:opacity-100 text-white text-4xl">Backend Code</span>
+                    <span className="opacity-0 group-hover:opacity-100 text-white text-4xl"><a href={project.liveLink}>Live Link</a></span>
+                    <span className="opacity-0 group-hover:opacity-100 text-white text-4xl"><a href={project.sourceCode}>Source Code</a></span>
                 </div>
             </div>
-            <div>
+            <div className="flex flex-col gap-[0.75rem]">
                 <h1>{project.title}</h1>
                 <p>{project.description}</p>
-                <div className="flex flex-wrap gap-[0.2rem]">
+                <div className="flex flex-wrap justify-center gap-[0.2rem]">
                     {project.techstack.map((tech,index) => (
                         <span key={index} className="p-[0.3rem] text-black bg-cyan-400 rounded-2xl">{tech}</span>
                     ))}
                 </div>
+                <div className="flex flex-wrap gap-[1rem] justify-center items-center">
                 <a href={project.sourceCode}>Source Code</a>
                 <a href={project.liveLink}>Live Link</a>
+                </div>
             </div>
         </motion.div>
     )
