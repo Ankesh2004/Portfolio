@@ -10,7 +10,7 @@ export const projects = [
         description: "An E-learning platform for students and teachers to connect and learn together.",
         image: eduverse,
         techstack: ["ReactJS", "Tailwindcss","MongoDB","ExpressJS","NodeJS","Razorpay"],
-        sourceCode: "www.github.com/Ankesh2004/Eduverse",
+        sourceCode: "https://github.com/Ankesh2004/Eduverse",
         liveLink: "https://eduverse-jet.vercel.app/"
     },
     {
@@ -28,7 +28,7 @@ export const projects = [
         description: "This is a project",
         image: weatherhq,
         techstack: ["Vanilla JS", "Tailwindcss","OpenWeatherAPI"],
-        sourceCode: "www.github.com/Ankesh2004",
+        sourceCode: "https://github.com/Ankesh2004/",
         liveLink: "https://weatherhq.netlify.app/"
     },
     {
@@ -37,7 +37,7 @@ export const projects = [
         description: "A simple password genrator and strength checker.",
         image: cipherforge,
         techstack: ["Vanilla JS", "Tailwindcss","Netlify"],
-        sourceCode: "www.github.com/Ankesh2004",
+        sourceCode: "https://github.com/Ankesh2004/",
         liveLink: "https://cipherforge.netlify.app/"
     }
 ]
