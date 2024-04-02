@@ -7,7 +7,7 @@ import { useMediaQuery } from "react-responsive"
 import toast from 'react-hot-toast';
 
 const Contact = () => {
-    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    const isMobile = useMediaQuery({ query: "(min-width: 7px)" });
     const form = useRef();
     const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
     const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
@@ -37,11 +37,11 @@ const Contact = () => {
             );
     };
     return (
-        <div id="contact" className={`flex ${isMobile ? 'flex-col' : 'flex-row'} my-[4rem]`}>
-            <div className={`${isMobile ? 'w-[100%' : 'w-[50%]'} flex flex-col gap-[1rem] items-center `}>
+        <div id="contact" className={`flex ${isMobile ? 'flex-col' : 'flex-row'} w-[100%] p-[1rem] my-[4rem]`}>
+            <div className={`${isMobile ? 'w-[100%]' : 'w-[50%]'} flex flex-col gap-[1rem] items-center `}>
                 <h2>Get in Touch</h2>
                 <p>Have a project idea? Elevate your vision - Reach Out and Lets Make It Happen. </p>
-                {/* <p>Feel free to reach out to me for any queries or collaborations.</p> */}
+                <p>Feel free to reach out to me for any queries or collaborations.</p>
                 <div className="flex flex-row gap-[1rem]">
                     {
                         contacts.map((contact) => (
@@ -53,17 +53,18 @@ const Contact = () => {
                         ))
                     }
                 </div>
-            </div>
-            {/* Contact form  */}
-            <div className={`flex flex-col gap-[0.4rem] ${isMobile ? 'w-[100%]' : 'w-[50%]'} text-center gap-[1rem]`}>
-                <h1>Contact Me</h1>
-                <form form ref={form} onSubmit={sendEmail} className="flex flex-col gap-[1rem] items-center text-black">
+            </div> 
+            {/* Contact form */}
+            {/* <div className={`flex flex-col text-center gap-[1rem]`}> */}
+                {/* <h1>Contact Me</h1> */}
+                <form form ref={form} onSubmit={sendEmail} className="flex flex-col w-[100%] gap-[1rem] items-center text-black">
+                
                     <input type="text" name='user_name' placeholder="Name" className="p-[0.5rem] w-[90%] rounded-lg" />
                     <input type="email" name='user_email' placeholder="Email" className="p-[0.5rem] w-[90%] rounded-lg" />
                     <textarea placeholder="Message" name='message' className="p-[0.5rem] w-[90%] h-[8rem] rounded-lg" />
                     <button type='submit' className="p-[0.5rem] bg-[#d64531] w-[8rem] text-white rounded-lg">Send</button>
                 </form>
-            </div>
+            {/* </div> */}
         </div>
     )
 }

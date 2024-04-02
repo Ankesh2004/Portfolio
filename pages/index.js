@@ -20,9 +20,8 @@ export default function index() {
         <Skills/>
         <Projects/>
         <Contact/>
+        <Footer/>
       </div>
-      <Footer/>
-
     </div>
   );
 }

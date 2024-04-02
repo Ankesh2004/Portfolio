@@ -36,7 +36,7 @@ const About = () => {
   }, [controls, inView]);
 
   return (
-    <div className='p-[6rem]' ref={ref} id='about'>
+    <div className='p-[1rem]' ref={ref} id='about'>
       <AnimatedText word="About Me" size="4rem" inView={inView} />
       <motion.p
         initial="hidden"

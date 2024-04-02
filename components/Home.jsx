@@ -40,7 +40,7 @@ const Home = () => {
     }
   }, [inView]);
   return (
-    <div ref={ref} id="home" className={`flex flex-wrap items-center p-[4rem] justify-center bg-[#111a] mt-[4rem] rounded-lg w-[90%] gap-[6rem]`}>
+    <div ref={ref} id="home" className={`flex flex-wrap items-center p-[4rem] justify-center bg-[#111a] mt-[4rem] rounded-lg w-[100%] gap-[6rem]`}>
       {/* Profile Picture and CV  */}
       <motion.div className="z-10 flex items-center rounded-full"
         initial="hidden"

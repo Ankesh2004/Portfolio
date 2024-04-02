@@ -11,7 +11,7 @@ const Skills = () => {
     threshold: 0.5,
   });
   return (  
-  <div ref={ref} id="skills" className="flex flex-col text-center items-center mb-[4rem]">
+  <div ref={ref} id="skills" className="flex flex-col text-center items-center mb-[4rem] p-[1rem] w-[100%]">
     <AnimatedText word={"Skills"} size={"3rem"} inView={inView}/>
     <div className={`flex flex-wrap items-center justify-center ${isMobile?'':'w-[80%]'}`}>
       {skills.map((skill) => (
