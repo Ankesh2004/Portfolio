@@ -12,7 +12,8 @@ const Skills = () => {
   });
   return (  
   <div ref={ref} id="skills" className="flex flex-col text-center items-center mb-[4rem] p-[1rem] w-[100%]">
-    <AnimatedText word={"Skills"} size={"3rem"} inView={inView}/>
+    {/* <AnimatedText word={"Skills"} size={"3rem"} inView={inView}/> */}
+    <h1>Skills</h1>
     <div className={`flex flex-wrap items-center justify-center ${isMobile?'':'w-[80%]'}`}>
       {skills.map((skill) => (
         <Skill key={skill.title} skill={skill} />

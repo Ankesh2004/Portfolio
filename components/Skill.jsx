@@ -38,7 +38,7 @@ const Skill = ({ skill }) => {
             whileHover={{ scale: 1.1 }}
             >
             <div className={`bg-${skill.background} p-[0.2rem] rounded-xl`}>
-            <Image src={skill.icon} alt={skill.title} width={`${isMobile ? '50':'75'}`} height={`${isMobile ? '50':'75'}`} background={skill.background} />
+            <Image src={skill.icon} alt={skill.title} width={`${isMobile ? '40':'75'}`} height={`${isMobile ? '50':'75'}`} background={skill.background} />
             </div>
             <div className="flex bg-blue-600 items-center rounded-xl p-[0.2rem] text-yellow-200 opacity-0 text-sm group-hover:opacity-100 transition-opacity duration-200">
                 <p>{skill.title}</p>
